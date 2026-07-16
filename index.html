@@ -312,7 +312,7 @@ function updateDimScore(di){
   const el=document.getElementById('ds-'+di);const ml=document.getElementById('dm-'+di);const dp=document.getElementById('dp-'+di);
   dp.textContent=cnt+' / 8';if(cnt===8)dp.classList.add('complete');else dp.classList.remove('complete');
   if(cnt>0){const avg=(total/cnt).toFixed(2);el.textContent=avg;const b=getBand(parseFloat(avg));ml.textContent=b.label;ml.style.color=b.color;ml.style.background=b.bg;}
-  else{el.textContent='&#8212;';ml.textContent='';}
+  else{el.textContent='\u2014';ml.textContent='';}
 }
 
 function updateProgress(){
@@ -337,7 +337,7 @@ function submitAssessment(){
   document.getElementById('scoreImplication').textContent=getImplication(overall);
   const org=document.getElementById('orgName').value||'Your Organisation';
   const rev=parseFloat(document.getElementById('revenue').value);
-  document.getElementById('resultsClientLine').textContent=org+' &#8212; Enterprise Transformation & Growth Readiness Assessment';
+  document.getElementById('resultsClientLine').textContent=org+' \u2014 Enterprise Transformation & Growth Readiness Assessment';
   let gapStr='';
   if(rev){const gap=(rev*0.10*(1-(overall/5))).toFixed(1);gapStr=gap;document.getElementById('costGapAmount').textContent='Rs.'+gap+' Crores';document.getElementById('costGapBox').style.display='block';}
   const rg=document.getElementById('resultsGrid');rg.innerHTML='';
