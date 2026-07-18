@@ -562,7 +562,7 @@ async function sendReportToMiraiAxis(org,overall,overallStr,bandLabel,dimScores,
     };
     DIMS.forEach((d,di)=>{payload['score_'+d.code]=Math.round(dimScores[di])+'%';});
 
-    await fetch('https://script.google.com/macros/s/AKfycbwsEOtPqrEvB6zyepX6y5ASUJDI7rpb8rnTikxgc6XHMGDieuTqH1GmZ0Ota3Do86Yl/exec',{
+    await fetch('https://script.google.com/macros/s/AKfycbwXO9auSJEmKDsZVytg-AhSsP1ocK6ZrXCWfhiKA4Exb4K6dW32hzdMFLOsIuvC6n4N/exec',{
       method:'POST',
       mode:'no-cors',
       headers:{'Content-Type':'text/plain'},
